@@ -1,7 +1,7 @@
 package com.dasza.productmgmt.auth.service;
 
-import com.dasza.productmgmt.auth.entity.User;
-import com.dasza.productmgmt.auth.entity.UserRepository;
+import com.dasza.productmgmt.auth.model.User;
+import com.dasza.productmgmt.auth.repository.UserRepository;
 import com.dasza.productmgmt.auth.model.GoogleUserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;

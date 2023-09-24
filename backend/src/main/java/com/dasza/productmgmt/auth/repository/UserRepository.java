@@ -1,5 +1,6 @@
-package com.dasza.productmgmt.auth.entity;
+package com.dasza.productmgmt.auth.repository;
 
+import com.dasza.productmgmt.auth.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

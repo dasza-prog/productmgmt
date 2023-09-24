@@ -22,7 +22,22 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(auth -> {
-                    auth.requestMatchers("/api/v1/unsecured").permitAll();
+                    auth.requestMatchers(
+                            "/api/v1/unsecured",
+                            "/v2/api-docs",
+                            "/v3/api-docs",
+                            "/v3/api-docs/**",
+                            "/swagger-resources",
+                            "/swagger-resources/**",
+                            "/configuration/ui",
+                            "/configuration/security",
+                            "/swagger-ui",
+                            "/springfox",
+                            "/swagger-ui/**",
+                            "/webjars/**",
+                            "/swagger-ui.html",
+                            "/error"
+                    ).permitAll();
                     auth.anyRequest().authenticated();
                 })
                 .oauth2Login(oauth2 -> oauth2.userInfoEndpoint().oidcUserService(customOidcUserService))

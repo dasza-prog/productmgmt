@@ -1,4 +1,4 @@
-package com.dasza.productmgmt.auth.entity;
+package com.dasza.productmgmt.auth.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
